@@ -1,0 +1,8 @@
+vector_db:
+  path: data/chroma
+  collection: confidential_chunks
+
+models:
+  ollama_url: ""
+  chat_model: ""
+  embedding_model: ""
