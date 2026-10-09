@@ -1,0 +1,5 @@
+# long-but-harmless tokens from YOUR world: paths, identifiers, UUIDs, hashes
+internationalization_configuration_manager
+/usr/local/lib/python3.12/site-packages
+AbstractSingletonProxyFactoryBean1
+550e8400-e29b-41d4-a716-446655440000

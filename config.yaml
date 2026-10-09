@@ -6,3 +6,14 @@ models:
   ollama_url: ""
   chat_model: ""
   embedding_model: ""
+
+detection:
+  keywords:
+    - confidential
+    - internal use only
+    - do not distribute
+    - proprietary
+    - trade secret
+  entropy:
+    min_length: 20
+    threshold: 4.5   # placeholder, tune in step 8

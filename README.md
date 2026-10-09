@@ -2,7 +2,7 @@
 
 A local-first data loss prevention (DLP) system. It detects sensitive text and confidential files before they leave your machine, using deterministic detectors, a local LLM, and vector similarity search. Everything runs on localhost; nothing sensitive leaves the device.
 
-> **Status:** Phase 0 (environment setup) complete. See `docs/` for the design, phases, and architecture.
+> **Status:** Phase 1 (deterministic detection) complete. See `docs/` for the design, phases, and architecture.
 
 ## Prerequisites
 
