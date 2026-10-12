@@ -3,8 +3,8 @@ vector_db:
   collection: confidential_chunks
 
 models:
-  ollama_url: ""
-  chat_model: ""
+  ollama_url: "http://127.0.0.1:11434"
+  chat_model: "llama3.2:3b"
   embedding_model: ""
 
 detection:
@@ -17,3 +17,6 @@ detection:
   entropy:
     min_length: 20
     threshold: 4.5   # placeholder, tune in step 8
+  llm:
+    timeout_seconds: 30.0
+    max_chars: 2000

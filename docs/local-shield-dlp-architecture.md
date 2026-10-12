@@ -14,9 +14,9 @@ This document is organized the way the project is built. Each stage describes **
 
 | Phase | Stage | What becomes runnable | Needs LLM env? | Done |
 |---|---|---|---|---|
-| 0 | Skeleton | `/health`, vector DB round-trip, clean `pytest` | No | ⬜ |
-| 1 | Deterministic detection | `run_tier0` / `run_tier1` on any string | No | ⬜ |
-| 2 | LLM text classifier | `classify(text)` via Ollama chat model | Chat model | ⬜ |
+| 0 | Skeleton | `/health`, vector DB round-trip, clean `pytest` | No | ✅ |
+| 1 | Deterministic detection | `run_tier0` / `run_tier1` on any string | No | ✅ |
+| 2 | LLM text classifier | `classify(text)` via Ollama chat model | Chat model | ✅ |
 | 3 | Confidential file index | Folder stays synced into vector DB | Embedding model | ⬜ |
 | 4 | Similarity search | `find_candidates(file)` → candidate list | Embedding model | ⬜ |
 | 5 | Semantic verification | `VectorMatchResult` for an uploaded file | Both | ⬜ |

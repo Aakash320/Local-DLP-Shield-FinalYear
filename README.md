@@ -2,7 +2,7 @@
 
 A local-first data loss prevention (DLP) system. It detects sensitive text and confidential files before they leave your machine, using deterministic detectors, a local LLM, and vector similarity search. Everything runs on localhost; nothing sensitive leaves the device.
 
-> **Status:** Phase 1 (deterministic detection) complete. See `docs/` for the design, phases, and architecture.
+> **Status:** Phase 2 (Local LLM Text Classifier) complete. See `docs/` for the design, phases, and architecture.
 
 ## Prerequisites
 
@@ -82,11 +82,28 @@ config.yaml       Central configuration (model settings stay empty until Phases 
 
 ## Configuration
 
-All settings live in `config.yaml`. Model names and the Ollama URL are intentionally empty for now.
+All settings live in `config.yaml`. Model settings point to the local Ollama instance (`http://127.0.0.1:11434`) and chat model (`llama3.2:3b`).
 
-## LLM setup (Phases 2-3)
+## LLM setup (Phase 2)
 
-_Not required yet._ This section will cover installing Ollama, pulling the chat model (Phase 2), and pulling the embedding model (Phase 3).
+Phase 2 introduces the local Tier 2 text classifier via Ollama:
+
+1. Install Ollama:
+   ```powershell
+   winget install Ollama.Ollama
+   ```
+2. Start the Ollama server:
+   ```powershell
+   ollama serve
+   ```
+3. Pull the local chat model:
+   ```powershell
+   ollama pull llama3.2:3b
+   ```
+4. Run LLM integration tests:
+   ```powershell
+   pytest -m llm
+   ```
 
 ## Docs
 
